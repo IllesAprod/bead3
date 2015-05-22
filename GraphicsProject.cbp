@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GraphicsProject" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/GraphicsProject" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/GraphicsProject" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O2" />
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add library="lib\libgraphics.a" />
+			<Add library="lib\libgraphicsd.a" />
+			<Add library="lib\libsdl_ttf.a" />
+			<Add library="lib\libSDL.dll.a" />
+			<Add library="lib\libSDLmain.a" />
+			<Add directory="lib" />
+		</Linker>
+		<Unit filename="Application.cpp" />
+		<Unit filename="Button.cpp" />
+		<Unit filename="CheckBox.cpp" />
+		<Unit filename="DynamicText.cpp" />
+		<Unit filename="ListDropDown.cpp" />
+		<Unit filename="MyApp.cpp" />
+		<Unit filename="NumberPicker.cpp" />
+		<Unit filename="StaticText.cpp" />
+		<Unit filename="Widget.cpp" />
+		<Unit filename="include/Application.hpp" />
+		<Unit filename="include/Button.hpp" />
+		<Unit filename="include/CheckBox.hpp" />
+		<Unit filename="include/Colors.hpp" />
+		<Unit filename="include/DynamicText.hpp" />
+		<Unit filename="include/ListDropDown.hpp" />
+		<Unit filename="include/MyApp.hpp" />
+		<Unit filename="include/NumberPicker.hpp" />
+		<Unit filename="include/StaticText.hpp" />
+		<Unit filename="include/Widget.hpp" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

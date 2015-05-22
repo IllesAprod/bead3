@@ -1,0 +1,131 @@
+# depslib dependency file v1.0
+1431610511 source:c:\users\aprod_illes\cpp\newwidget\main.cpp
+	"graphics.hpp"
+	"MyApp.hpp"
+
+1330553510 c:\users\aprod_illes\cpp\newwidget\include\graphics.hpp
+	<string>
+
+1431687254 source:c:\users\aprod_illes\cpp\newwidget\application.cpp
+	"Application.hpp"
+	<iostream>
+
+1431522858 source:c:\users\aprod_illes\cpp\newwidget\button.cpp
+
+1431522900 source:c:\users\aprod_illes\cpp\newwidget\checkbox.cpp
+
+1431686871 source:c:\users\aprod_illes\cpp\newwidget\dynamictext.cpp
+	"DynamicText.hpp"
+	<iostream>
+
+1431522840 source:c:\users\aprod_illes\cpp\newwidget\listdropdown.cpp
+
+1431687200 source:c:\users\aprod_illes\cpp\newwidget\myapp.cpp
+	"MyApp.hpp"
+	<iostream>
+	"graphics.hpp"
+
+1431522882 source:c:\users\aprod_illes\cpp\newwidget\numberpicker.cpp
+
+1431611286 source:c:\users\aprod_illes\cpp\newwidget\statictext.cpp
+	"StaticText.hpp"
+	"graphics.hpp"
+	<iostream>
+
+1431686882 source:c:\users\aprod_illes\cpp\newwidget\widget.cpp
+	"Widget.hpp"
+	"Application.hpp"
+	"graphics.hpp"
+	"Colors.hpp"
+	<iostream>
+
+1431688495 c:\users\aprod_illes\cpp\newwidget\include\widget.hpp
+	<string>
+	"graphics.hpp"
+
+1431081914 c:\users\aprod_illes\cpp\newwidget\include\colors.hpp
+
+1431610499 c:\users\aprod_illes\cpp\newwidget\include\application.hpp
+	"widget.hpp"
+	"graphics.hpp"
+	<vector>
+
+1431687886 c:\users\aprod_illes\cpp\newwidget\include\myapp.hpp
+	"Widget.hpp"
+	"StaticText.hpp"
+	"DynamicText.hpp"
+	"Application.hpp"
+
+1431609619 c:\users\aprod_illes\cpp\newwidget\include\statictext.hpp
+	"Widget.hpp"
+	<string>
+
+1431685772 c:\users\aprod_illes\cpp\newwidget\include\dynamictext.hpp
+	"widget.hpp"
+	<string>
+
+1431788590 source:c:\users\aprood\documents\github\cpp_\newwidget\application.cpp
+	"Application.hpp"
+	<iostream>
+
+1431788233 c:\users\aprood\documents\github\cpp_\newwidget\include\application.hpp
+	"widget.hpp"
+	"graphics.hpp"
+	<vector>
+
+1431788233 c:\users\aprood\documents\github\cpp_\newwidget\include\widget.hpp
+	<string>
+	"graphics.hpp"
+
+1431783008 c:\users\aprood\documents\github\cpp_\newwidget\include\graphics.hpp
+	<string>
+
+1431783008 source:c:\users\aprood\documents\github\cpp_\newwidget\button.cpp
+
+1431783008 source:c:\users\aprood\documents\github\cpp_\newwidget\checkbox.cpp
+
+1431788535 source:c:\users\aprood\documents\github\cpp_\newwidget\dynamictext.cpp
+	"DynamicText.hpp"
+	<iostream>
+
+1431783008 c:\users\aprood\documents\github\cpp_\newwidget\include\dynamictext.hpp
+	"widget.hpp"
+	<string>
+
+1431783008 source:c:\users\aprood\documents\github\cpp_\newwidget\listdropdown.cpp
+
+1431783008 source:c:\users\aprood\documents\github\cpp_\newwidget\main.cpp
+	"graphics.hpp"
+	"MyApp.hpp"
+
+1431783008 c:\users\aprood\documents\github\cpp_\newwidget\include\myapp.hpp
+	"Widget.hpp"
+	"StaticText.hpp"
+	"DynamicText.hpp"
+	"Application.hpp"
+
+1431783008 c:\users\aprood\documents\github\cpp_\newwidget\include\statictext.hpp
+	"Widget.hpp"
+	<string>
+
+1431788554 source:c:\users\aprood\documents\github\cpp_\newwidget\myapp.cpp
+	"MyApp.hpp"
+	<iostream>
+	"graphics.hpp"
+
+1431783008 source:c:\users\aprood\documents\github\cpp_\newwidget\numberpicker.cpp
+
+1431783008 source:c:\users\aprood\documents\github\cpp_\newwidget\statictext.cpp
+	"StaticText.hpp"
+	"graphics.hpp"
+	<iostream>
+
+1431788590 source:c:\users\aprood\documents\github\cpp_\newwidget\widget.cpp
+	"Widget.hpp"
+	"Application.hpp"
+	"graphics.hpp"
+	"Colors.hpp"
+	<iostream>
+
+1431783008 c:\users\aprood\documents\github\cpp_\newwidget\include\colors.hpp
+
