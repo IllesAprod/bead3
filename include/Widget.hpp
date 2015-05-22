@@ -37,6 +37,9 @@ public:
 
     void Load(Application* ap);
 
+    /*** FEEDBACK ***/
+    void FeedBackClick(int x, int y);
+
 };
 
 

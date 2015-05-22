@@ -7,20 +7,21 @@ using namespace genv;
 
 
 
-AmobaWidget::AmobaWidget(Application *ap, int x, int y, int sx, int sy, std::vector<std::vector<AmobaMezo> > v)
-    : Widget(ap,x,y,sx,sy),  AmobaMezoVector(v)
+AmobaWidget::AmobaWidget(Application *ap, int x, int y, int sx, int sy, GameMod *gm, std::vector<std::vector<AmobaMezo> > v)
+    : Widget(ap,x,y,sx,sy), GM(gm), AmobaMezoVector(v)
     {
+    focusable = true;
+    focused = false;
     Widget::Load(ap);
     }
 
 void AmobaWidget::Draw()
 {
 
-
     gout << move_to(coord_x, coord_y);
-    for(unsigned i=0; i < 9; i++)
+    for(unsigned i=0; i < AmobaMezoVector.size(); i++)
     {
-        for(unsigned j=0; j < 9; j++)
+        for(unsigned j=0; j < AmobaMezoVector.size(); j++)
         {
             stringstream ss;
             string temp;
@@ -46,4 +47,33 @@ void AmobaWidget::Draw()
 
         }
     }
+}
+
+void AmobaWidget::EventHandler(event ev)
+{
+    if(ev.button == btn_left)
+    {
+
+        for(unsigned i=0; i < AmobaMezoVector.size(); i++)
+        {
+            for(unsigned j=0; j < AmobaMezoVector.size(); j++)
+            {
+                if(ev.pos_x >= (i*size_x) + i && ev.pos_x < ((i+1)*size_x) + i && ev.pos_y >= (j*size_y) + j && ev.pos_y < ((j+1)*size_y) + j)
+                {
+                    GM -> FeedBackClick(i, j);
+                }
+            }
+        }
+    }
+}
+
+bool AmobaWidget::GetOnMe(int x, int y)
+{
+    if (x >=  coord_x && x < coord_x + (size_x * AmobaMezoVector.size()) && y >= coord_y && y < coord_y+(size_y * AmobaMezoVector.size())) return true;
+    else return false;
+}
+
+void AmobaWidget::SetAmobaMezoVector(std::vector<std::vector<AmobaMezo> > v)
+{
+    AmobaMezoVector = v;
 }

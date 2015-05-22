@@ -5,6 +5,7 @@
 #include "DynamicText.hpp"
 #include "AmobaWidget.hpp"
 #include "Application.hpp"
+#include "GameMod.hpp"
 #include "Amoba_Mezo.hpp"
 #include  <vector>
 
@@ -17,12 +18,12 @@ protected:
     DynamicText *st3;
     AmobaWidget *aw;
     /*** MYAPP VARIABLES***/
+    GameMod *GM;
     std::vector<std::vector<AmobaMezo> > AmobaMezoVector;
 public:
     MyApp(int w, int h);
     void Show();
     void GenerateAmobaMezoVector();
-
 
 };
 

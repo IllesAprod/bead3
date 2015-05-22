@@ -129,7 +129,7 @@
 
 1431783008 c:\users\aprood\documents\github\cpp_\newwidget\include\colors.hpp
 
-1431788590 source:c:\users\aprood\documents\github\bead3\application.cpp
+1432332660 source:c:\users\aprood\documents\github\bead3\application.cpp
 	"Application.hpp"
 	<iostream>
 
@@ -138,7 +138,7 @@
 	"graphics.hpp"
 	<vector>
 
-1431788233 c:\users\aprood\documents\github\bead3\include\widget.hpp
+1432331559 c:\users\aprood\documents\github\bead3\include\widget.hpp
 	<string>
 	"graphics.hpp"
 
@@ -161,12 +161,13 @@
 	"graphics.hpp"
 	"MyApp.hpp"
 
-1432329722 c:\users\aprood\documents\github\bead3\include\myapp.hpp
+1432332035 c:\users\aprood\documents\github\bead3\include\myapp.hpp
 	"Widget.hpp"
 	"StaticText.hpp"
 	"DynamicText.hpp"
 	"AmobaWidget.hpp"
 	"Application.hpp"
+	"GameMod.hpp"
 	"Amoba_Mezo.hpp"
 	<vector>
 
@@ -174,7 +175,7 @@
 	"Widget.hpp"
 	<string>
 
-1432330024 source:c:\users\aprood\documents\github\bead3\myapp.cpp
+1432333202 source:c:\users\aprood\documents\github\bead3\myapp.cpp
 	"MyApp.hpp"
 	<iostream>
 	"graphics.hpp"
@@ -187,7 +188,7 @@
 	"graphics.hpp"
 	<iostream>
 
-1431788590 source:c:\users\aprood\documents\github\bead3\widget.cpp
+1432332035 source:c:\users\aprood\documents\github\bead3\widget.cpp
 	"Widget.hpp"
 	"Application.hpp"
 	"graphics.hpp"
@@ -210,14 +211,23 @@
 
 1432328788 c:\users\aprood\documents\github\bead3\include\amoba_mezo.hpp
 
-1432330394 source:c:\users\aprood\documents\github\bead3\amobamezo.cpp
+1432333094 source:c:\users\aprood\documents\github\bead3\amobamezo.cpp
 	"AmobaWidget.hpp"
 	<string>
 	<sstream>
 	<iostream>
 
-1432328151 c:\users\aprood\documents\github\bead3\include\amobawidget.hpp
+1432333718 c:\users\aprood\documents\github\bead3\include\amobawidget.hpp
 	<vector>
 	"Widget.hpp"
+	"GameMod.hpp"
 	"Amoba_Mezo.hpp"
+
+1432333539 c:\users\aprood\documents\github\bead3\include\gamemod.hpp
+	"Amoba_Mezo.hpp"
+	<vector>
+
+1432333539 source:c:\users\aprood\documents\github\bead3\gamemod.cpp
+	"GameMod.hpp"
+	<iostream>
 

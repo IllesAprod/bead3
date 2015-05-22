@@ -13,7 +13,8 @@ GenerateAmobaMezoVector();
  //st1 = new DynamicText(this, 100, 100, 100, 20, "valami1");
  //st1 = new DynamicText(this, 100, 130, 100, 20, "valami2");
  //st1 = new DynamicText(this, 100, 160, 100, 20, "valami3");
- aw = new AmobaWidget(this, 0,0,40,40,AmobaMezoVector);
+ GM = new GameMod(AmobaMezoVector);
+ aw = new AmobaWidget(this, 0,0,40,40, GM, AmobaMezoVector);
 }
 
 void MyApp::Show()
@@ -21,10 +22,15 @@ void MyApp::Show()
     while(gin >> ev) {
     ClearScreen();
     EventHandler();
+
+    AmobaMezoVector = GM -> GetAmobaMezoVector();
+    aw -> SetAmobaMezoVector(AmobaMezoVector);
+
     for (unsigned i = 0; i<Widgets.size(); i++)
         {
         Widgets[i] -> Draw();
         }
+
     gout << refresh;
     }
 }
@@ -42,3 +48,4 @@ void MyApp::GenerateAmobaMezoVector()
         AmobaMezoVector.push_back(temp);
     }
 }
+
