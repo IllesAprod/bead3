@@ -6,7 +6,11 @@ class SudokuMezo {
 public:
     int Value;
     bool Generated;
-    bool WrongValue;
+    bool WrongBox;
+    bool WrongRow;
+    bool WrongColumn;
+    bool WrongNull;
+
     SudokuMezo (int v, bool g);
 
 };

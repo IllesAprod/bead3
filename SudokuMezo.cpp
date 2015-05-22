@@ -25,15 +25,20 @@ void SudokuWidget::Draw()
         {
             stringstream ss;
             string temp;
-            ss << SudokuMezoVector[i][j].Value;
-            ss >> temp;
+            if(SudokuMezoVector[i][j].Value != 0)
+            {
+                ss << SudokuMezoVector[i][j].Value;
+                ss >> temp;
+            }
+            else temp = "";
+
             gout << genv::move_to(coord_x + i*size_x + (i), coord_y + j*size_y + (j));
             if(SudokuMezoVector[i][j].Generated)
             {
                 gout << color(200,200,200);
                 gout << box(size_x, size_y);
             }
-            else if(SudokuMezoVector[i][j].WrongValue)
+            else if(SudokuMezoVector[i][j].WrongBox || SudokuMezoVector[i][j].WrongRow || SudokuMezoVector[i][j].WrongColumn || SudokuMezoVector[i][j].WrongNull)
             {
                 gout << color(255,0,0);
                 gout << box(size_x, size_y);

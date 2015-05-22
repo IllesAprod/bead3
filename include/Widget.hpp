@@ -3,6 +3,7 @@
 #include <string>
 #include "graphics.hpp"
 
+
 class Application;
 
 class Widget{
@@ -41,6 +42,7 @@ public:
     void FeedBackClick(int x, int y);
 
 };
+
 
 
 

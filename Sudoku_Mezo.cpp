@@ -3,6 +3,9 @@
 SudokuMezo::SudokuMezo(int v, bool g)
     : Value(v), Generated(g) {
 
-    WrongValue = false;
+    WrongBox = false;
+    WrongRow = false;
+    WrongColumn = false;
+    WrongNull = false;
     }
 

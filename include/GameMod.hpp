@@ -10,6 +10,20 @@ public:
     GameMod(std::vector<std::vector<SudokuMezo> > v);
     void FeedBackClick(int x, int y);
     void IncValue(int x, int y);
+    void CheckBoxes();
+    void CheckRows();
+    void CheckColumns();
+    void CheckAndSet0();
+    bool CheckBox(int x, int y);
+    bool CheckRow(int x);
+    bool CheckColumn(int y);
+    bool CompareVector(std::vector<int> v);
+    void SetBoxWrongTrue(int x, int y);
+    void SetBoxWrongFalse(int x, int y);
+    void SetRowWrongTrue(int x);
+    void SetRowWrongFalse(int x);
+    void SetColumnWrongTrue(int y);
+    void SetColumnWrongFalse(int y);
     std::vector<std::vector<SudokuMezo> > GetSudokuMezoVector();
 };
 
