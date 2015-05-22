@@ -13,13 +13,13 @@ protected:
     float Content_Size, Window_Size, Grip_Position, Content_Position, Grip_Size;
 public:
     ListDropDown(Application* ap, int x, int y, int sx, int sy, int mop);
-    virtual void EventHandler(event ev);
+    //virtual void EventHandler(genv::event ev);
     virtual void Draw();
     void AddItem(std::string new_item);
     void DeleteVisibleItem();
     void SetVisibleIndex();
     void ClearItems();
-    void ScrollbarAlgorithm;
+    void ScrollbarAlgorithm();
     int GetVisibleIndex();
     std::string GetVisibleValue();
 

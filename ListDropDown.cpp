@@ -4,7 +4,7 @@
 using namespace std;
 using namespace genv;
 
-ListDropDown::ListDropDown()(Application* ap, int x, int y, int sx, int sy, int moi)
+ListDropDown::ListDropDown(Application* ap, int x, int y, int sx, int sy, int moi)
     : Widget(ap,x,y,sx,sy)
     {
         focusable = true;

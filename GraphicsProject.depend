@@ -129,3 +129,95 @@
 
 1431783008 c:\users\aprood\documents\github\cpp_\newwidget\include\colors.hpp
 
+1431788590 source:c:\users\aprood\documents\github\bead3\application.cpp
+	"Application.hpp"
+	<iostream>
+
+1431788233 c:\users\aprood\documents\github\bead3\include\application.hpp
+	"widget.hpp"
+	"graphics.hpp"
+	<vector>
+
+1431788233 c:\users\aprood\documents\github\bead3\include\widget.hpp
+	<string>
+	"graphics.hpp"
+
+1431783008 c:\users\aprood\documents\github\bead3\include\graphics.hpp
+	<string>
+
+1431783008 source:c:\users\aprood\documents\github\bead3\button.cpp
+
+1431783008 source:c:\users\aprood\documents\github\bead3\checkbox.cpp
+
+1432329013 source:c:\users\aprood\documents\github\bead3\dynamictext.cpp
+	"DynamicText.hpp"
+	<iostream>
+
+1431783008 c:\users\aprood\documents\github\bead3\include\dynamictext.hpp
+	"widget.hpp"
+	<string>
+
+1431783008 source:c:\users\aprood\documents\github\bead3\main.cpp
+	"graphics.hpp"
+	"MyApp.hpp"
+
+1432329722 c:\users\aprood\documents\github\bead3\include\myapp.hpp
+	"Widget.hpp"
+	"StaticText.hpp"
+	"DynamicText.hpp"
+	"AmobaWidget.hpp"
+	"Application.hpp"
+	"Amoba_Mezo.hpp"
+	<vector>
+
+1431783008 c:\users\aprood\documents\github\bead3\include\statictext.hpp
+	"Widget.hpp"
+	<string>
+
+1432330024 source:c:\users\aprood\documents\github\bead3\myapp.cpp
+	"MyApp.hpp"
+	<iostream>
+	"graphics.hpp"
+	"stdlib.h"
+
+1431783008 source:c:\users\aprood\documents\github\bead3\numberpicker.cpp
+
+1431783008 source:c:\users\aprood\documents\github\bead3\statictext.cpp
+	"StaticText.hpp"
+	"graphics.hpp"
+	<iostream>
+
+1431788590 source:c:\users\aprood\documents\github\bead3\widget.cpp
+	"Widget.hpp"
+	"Application.hpp"
+	"graphics.hpp"
+	"Colors.hpp"
+	<iostream>
+
+1431783008 c:\users\aprood\documents\github\bead3\include\colors.hpp
+
+1432327185 source:c:\users\aprood\documents\github\bead3\listdropdown.cpp
+	"ListDropDown.hpp"
+	<stdlib.h>
+
+1432327194 c:\users\aprood\documents\github\bead3\include\listdropdown.hpp
+	"Widget.hpp"
+	<vector>
+	<string>
+
+1432330446 source:c:\users\aprood\documents\github\bead3\amoba_mezo.cpp
+	"Amoba_Mezo.hpp"
+
+1432328788 c:\users\aprood\documents\github\bead3\include\amoba_mezo.hpp
+
+1432330394 source:c:\users\aprood\documents\github\bead3\amobamezo.cpp
+	"AmobaWidget.hpp"
+	<string>
+	<sstream>
+	<iostream>
+
+1432328151 c:\users\aprood\documents\github\bead3\include\amobawidget.hpp
+	<vector>
+	"Widget.hpp"
+	"Amoba_Mezo.hpp"
+
