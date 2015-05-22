@@ -8,13 +8,13 @@ using namespace genv;
 MyApp::MyApp(int w, int h)
 : Application(w,h)
 {
-GenerateAmobaMezoVector();
+GenerateSudokuMezoVector();
 
  //st1 = new DynamicText(this, 100, 100, 100, 20, "valami1");
  //st1 = new DynamicText(this, 100, 130, 100, 20, "valami2");
  //st1 = new DynamicText(this, 100, 160, 100, 20, "valami3");
- GM = new GameMod(AmobaMezoVector);
- aw = new AmobaWidget(this, 0,0,40,40, GM, AmobaMezoVector);
+ GM = new GameMod(SudokuMezoVector);
+ aw = new SudokuWidget(this, 0,0,40,40, GM, SudokuMezoVector);
 }
 
 void MyApp::Show()
@@ -23,8 +23,8 @@ void MyApp::Show()
     ClearScreen();
     EventHandler();
 
-    AmobaMezoVector = GM -> GetAmobaMezoVector();
-    aw -> SetAmobaMezoVector(AmobaMezoVector);
+    SudokuMezoVector = GM -> GetSudokuMezoVector();
+    aw -> SetSudokuMezoVector(SudokuMezoVector);
 
     for (unsigned i = 0; i<Widgets.size(); i++)
         {
@@ -35,17 +35,17 @@ void MyApp::Show()
     }
 }
 
-void MyApp::GenerateAmobaMezoVector()
+void MyApp::GenerateSudokuMezoVector()
 {
     for(int i=0; i<9; i++)
     {
-        vector<AmobaMezo> temp;
+        vector<SudokuMezo> temp;
         for(int j=0; j<9; j++)
         {
-            AmobaMezo m_temp(rand()%10, rand()%2);
+            SudokuMezo m_temp(rand()%10, rand()%2);
             temp.push_back(m_temp);
         }
-        AmobaMezoVector.push_back(temp);
+        SudokuMezoVector.push_back(temp);
     }
 }
 

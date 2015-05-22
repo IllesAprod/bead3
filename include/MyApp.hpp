@@ -3,10 +3,10 @@
 #include "Widget.hpp"
 #include "StaticText.hpp"
 #include "DynamicText.hpp"
-#include "AmobaWidget.hpp"
+#include "SudokuWidget.hpp"
 #include "Application.hpp"
 #include "GameMod.hpp"
-#include "Amoba_Mezo.hpp"
+#include "Sudoku_Mezo.hpp"
 #include  <vector>
 
 class MyApp : public Application
@@ -16,14 +16,14 @@ protected:
     DynamicText *st1;
     DynamicText *st2;
     DynamicText *st3;
-    AmobaWidget *aw;
+    SudokuWidget *aw;
     /*** MYAPP VARIABLES***/
     GameMod *GM;
-    std::vector<std::vector<AmobaMezo> > AmobaMezoVector;
+    std::vector<std::vector<SudokuMezo> > SudokuMezoVector;
 public:
     MyApp(int w, int h);
     void Show();
-    void GenerateAmobaMezoVector();
+    void GenerateSudokuMezoVector();
 
 };
 

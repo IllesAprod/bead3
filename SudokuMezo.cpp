@@ -1,4 +1,4 @@
-#include "AmobaWidget.hpp"
+#include "SudokuWidget.hpp"
 #include <string>
 #include <sstream>
 #include <iostream>
@@ -7,33 +7,33 @@ using namespace genv;
 
 
 
-AmobaWidget::AmobaWidget(Application *ap, int x, int y, int sx, int sy, GameMod *gm, std::vector<std::vector<AmobaMezo> > v)
-    : Widget(ap,x,y,sx,sy), GM(gm), AmobaMezoVector(v)
+SudokuWidget::SudokuWidget(Application *ap, int x, int y, int sx, int sy, GameMod *gm, std::vector<std::vector<SudokuMezo> > v)
+    : Widget(ap,x,y,sx,sy), GM(gm), SudokuMezoVector(v)
     {
     focusable = true;
     focused = false;
     Widget::Load(ap);
     }
 
-void AmobaWidget::Draw()
+void SudokuWidget::Draw()
 {
 
     gout << move_to(coord_x, coord_y);
-    for(unsigned i=0; i < AmobaMezoVector.size(); i++)
+    for(unsigned i=0; i < SudokuMezoVector.size(); i++)
     {
-        for(unsigned j=0; j < AmobaMezoVector.size(); j++)
+        for(unsigned j=0; j < SudokuMezoVector.size(); j++)
         {
             stringstream ss;
             string temp;
-            ss << AmobaMezoVector[i][j].Value;
+            ss << SudokuMezoVector[i][j].Value;
             ss >> temp;
             gout << genv::move_to(coord_x + i*size_x + (i), coord_y + j*size_y + (j));
-            if(AmobaMezoVector[i][j].Generated)
+            if(SudokuMezoVector[i][j].Generated)
             {
                 gout << color(200,200,200);
                 gout << box(size_x, size_y);
             }
-            else if(AmobaMezoVector[i][j].WrongValue)
+            else if(SudokuMezoVector[i][j].WrongValue)
             {
                 gout << color(255,0,0);
                 gout << box(size_x, size_y);
@@ -49,14 +49,14 @@ void AmobaWidget::Draw()
     }
 }
 
-void AmobaWidget::EventHandler(event ev)
+void SudokuWidget::EventHandler(event ev)
 {
     if(ev.button == btn_left)
     {
 
-        for(unsigned i=0; i < AmobaMezoVector.size(); i++)
+        for(unsigned i=0; i < SudokuMezoVector.size(); i++)
         {
-            for(unsigned j=0; j < AmobaMezoVector.size(); j++)
+            for(unsigned j=0; j < SudokuMezoVector.size(); j++)
             {
                 if(ev.pos_x >= (i*size_x) + i && ev.pos_x < ((i+1)*size_x) + i && ev.pos_y >= (j*size_y) + j && ev.pos_y < ((j+1)*size_y) + j)
                 {
@@ -67,13 +67,13 @@ void AmobaWidget::EventHandler(event ev)
     }
 }
 
-bool AmobaWidget::GetOnMe(int x, int y)
+bool SudokuWidget::GetOnMe(int x, int y)
 {
-    if (x >=  coord_x && x < coord_x + (size_x * AmobaMezoVector.size()) && y >= coord_y && y < coord_y+(size_y * AmobaMezoVector.size())) return true;
+    if (x >=  coord_x && x < coord_x + (size_x * SudokuMezoVector.size()) && y >= coord_y && y < coord_y+(size_y * SudokuMezoVector.size())) return true;
     else return false;
 }
 
-void AmobaWidget::SetAmobaMezoVector(std::vector<std::vector<AmobaMezo> > v)
+void SudokuWidget::SetSudokuMezoVector(std::vector<std::vector<SudokuMezo> > v)
 {
-    AmobaMezoVector = v;
+    SudokuMezoVector = v;
 }

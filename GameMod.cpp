@@ -3,8 +3,8 @@
 
 using namespace std;
 
-GameMod::GameMod(std::vector<std::vector<AmobaMezo> > v)
-    : AmobaMezoVector(v) {}
+GameMod::GameMod(std::vector<std::vector<SudokuMezo> > v)
+    : SudokuMezoVector(v) {}
 
 void GameMod::FeedBackClick(int x, int y)
 {
@@ -13,11 +13,11 @@ void GameMod::FeedBackClick(int x, int y)
 
 void GameMod::IncValue(int x, int y)
 {
-    if(AmobaMezoVector[x][y].Value < 9)  AmobaMezoVector[x][y].Value++;
-    else  AmobaMezoVector[x][y].Value = 0;
+    if(SudokuMezoVector[x][y].Value < 9)  SudokuMezoVector[x][y].Value++;
+    else  SudokuMezoVector[x][y].Value = 0;
 }
 
-std::vector<std::vector<AmobaMezo> > GameMod::GetAmobaMezoVector()
+std::vector<std::vector<SudokuMezo> > GameMod::GetSudokuMezoVector()
 {
-    return AmobaMezoVector;
+    return SudokuMezoVector;
 }

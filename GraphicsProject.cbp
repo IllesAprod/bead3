@@ -40,20 +40,26 @@
 			<Add library="lib\libSDLmain.a" />
 			<Add directory="lib" />
 		</Linker>
+		<Unit filename="AmobaMezo.cpp" />
+		<Unit filename="Amoba_Mezo.cpp" />
 		<Unit filename="Application.cpp" />
 		<Unit filename="Button.cpp" />
 		<Unit filename="CheckBox.cpp" />
 		<Unit filename="DynamicText.cpp" />
+		<Unit filename="GameMod.cpp" />
 		<Unit filename="ListDropDown.cpp" />
 		<Unit filename="MyApp.cpp" />
 		<Unit filename="NumberPicker.cpp" />
 		<Unit filename="StaticText.cpp" />
 		<Unit filename="Widget.cpp" />
+		<Unit filename="include/AmobaWidget.hpp" />
+		<Unit filename="include/Amoba_Mezo.hpp" />
 		<Unit filename="include/Application.hpp" />
 		<Unit filename="include/Button.hpp" />
 		<Unit filename="include/CheckBox.hpp" />
 		<Unit filename="include/Colors.hpp" />
 		<Unit filename="include/DynamicText.hpp" />
+		<Unit filename="include/GameMod.hpp" />
 		<Unit filename="include/ListDropDown.hpp" />
 		<Unit filename="include/MyApp.hpp" />
 		<Unit filename="include/NumberPicker.hpp" />
