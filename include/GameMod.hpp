@@ -24,6 +24,9 @@ public:
     void SetRowWrongFalse(int x);
     void SetColumnWrongTrue(int y);
     void SetColumnWrongFalse(int y);
+    void GenerateSudoku();
+    void LoadSudoku();
+    bool Win();
     std::vector<std::vector<SudokuMezo> > GetSudokuMezoVector();
 };
 

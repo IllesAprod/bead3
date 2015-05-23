@@ -15,6 +15,11 @@ GenerateSudokuMezoVector();
  //st1 = new DynamicText(this, 100, 160, 100, 20, "valami3");
  GM = new GameMod(SudokuMezoVector);
  aw = new SudokuWidget(this, 0,0,40,40, GM, SudokuMezoVector);
+ bt1 = new Button(this, 20, 420, 100, 30, "GENERATE", [&](){
+
+                 GM -> GenerateSudoku();
+
+                 });
 }
 
 void MyApp::Show()
@@ -42,7 +47,7 @@ void MyApp::GenerateSudokuMezoVector()
         vector<SudokuMezo> temp;
         for(int j=0; j<9; j++)
         {
-            SudokuMezo m_temp(rand()%10, rand()%2);
+            SudokuMezo m_temp(rand()%10, 0);
             temp.push_back(m_temp);
         }
         SudokuMezoVector.push_back(temp);

@@ -1,17 +1,32 @@
 #include "GameMod.hpp"
 #include <iostream>
-#include <algorithm>
+#include <time.h>
+#include <stdlib.h>
+#include <fstream>
 
 using namespace std;
 
 GameMod::GameMod(std::vector<std::vector<SudokuMezo> > v)
-    : SudokuMezoVector(v) {}
+    : SudokuMezoVector(v)
+    {
+        LoadSudoku();
+        CheckBoxes();
+        CheckRows();
+        CheckColumns();
+        CheckAndSet0();
+        srand (time(NULL));
+
+
+
+    }
 
 void GameMod::FeedBackClick(int x, int y)
 {
     if(true /***!SudokuMezoVector[x][y].Generated***/) IncValue(x,y);
     CheckBoxes();
     CheckRows();
+    CheckColumns();
+    CheckAndSet0();
 }
 
 void GameMod::IncValue(int x, int y)
@@ -182,7 +197,7 @@ bool GameMod::CompareVector(std::vector<int> v)
     {
         for(int j=0; j<temp.size(); j++)
         {
-            if(v[i] == temp[j] && i != j)
+            if(v[i] == temp[j] && i != j && v[i] != 0)
             {
                 return true;
             }
@@ -191,4 +206,110 @@ bool GameMod::CompareVector(std::vector<int> v)
     }
 
     return false;
+}
+
+
+bool GameMod::Win()
+{
+    for(int i=0; i<9; i++)
+    {
+        for(int j=0; j<9; j++)
+        {
+            if(SudokuMezoVector[i][j].WrongBox || SudokuMezoVector[i][j].WrongRow || SudokuMezoVector[i][j].WrongColumn || SudokuMezoVector[i][j].WrongNull) return false;
+        }
+    }
+
+    return true;
+}
+
+void GameMod::GenerateSudoku()
+{
+
+        int rand_num = rand()%3;
+        int rand_num2 = rand()%3;
+        for(int j=0; j<9; j++)
+        {
+            vector<vector<SudokuMezo> > temp = SudokuMezoVector;
+            SudokuMezoVector[rand_num2][j] = SudokuMezoVector[rand_num][j];
+            SudokuMezoVector[rand_num][j] = temp[rand_num2][j];
+            SudokuMezoVector[rand_num2+3][j] = SudokuMezoVector[rand_num+3][j];
+            SudokuMezoVector[rand_num+3][j] = temp[rand_num2+3][j];
+            SudokuMezoVector[rand_num2+6][j] = SudokuMezoVector[rand_num+6][j];
+            SudokuMezoVector[rand_num+6][j] = temp[rand_num2+6][j];
+
+        }
+        for(int j=0; j<9; j++)
+        {
+            vector<vector<SudokuMezo> > temp = SudokuMezoVector;
+            SudokuMezoVector[j][rand_num2] = SudokuMezoVector[j][rand_num];
+            SudokuMezoVector[j][rand_num] = temp[j][rand_num2];
+            SudokuMezoVector[j][rand_num2+3] = SudokuMezoVector[j][rand_num+3];
+            SudokuMezoVector[j][rand_num+3] = temp[j][rand_num2+3];
+            SudokuMezoVector[j][rand_num2+6] = SudokuMezoVector[j][rand_num+6];
+            SudokuMezoVector[j][rand_num+6] = temp[j][rand_num2+6];
+        }
+
+        if((rand()%2)%2 == 0)
+        {
+            for(int i=0; i<9 ;i++)
+            {
+                for(int j=0; j<9; j++)
+                {
+                    vector<vector<SudokuMezo> > temp = SudokuMezoVector;
+                    SudokuMezoVector[i][j] = SudokuMezoVector[j][i];
+                    SudokuMezoVector[j][i] = temp[i][j];
+                }
+            }
+        }
+
+
+        for(int i=0; i<60; i++)
+        {
+            vector<vector<SudokuMezo> > temp = SudokuMezoVector;
+            int rand1 = rand()%9;
+            int rand2 = rand()%9;
+            vector<int> possible;
+            for(int j=1; j<10; j++)
+            {
+
+                SudokuMezoVector[rand1][rand2].Value = j;
+                CheckBoxes();
+                CheckRows();
+                CheckColumns();
+                CheckAndSet0();
+                if(Win())
+                {
+                    possible.push_back(j);
+                    cout << j << " " << rand1 << " " << rand2 << endl;
+                }
+            }
+            if(possible.size() <= 5)
+            {
+                SudokuMezoVector[rand1][rand2].Value = 0;
+            }
+            else SudokuMezoVector = temp;
+        }
+
+
+        CheckBoxes();
+        CheckRows();
+        CheckColumns();
+        CheckAndSet0();
+
+}
+
+void GameMod::LoadSudoku()
+{
+    ifstream f;
+    f.open("sudoku.txt");
+    for(int i=0; i<9; i++)
+    {
+        for(int j=0; j<9; j++)
+        {
+            int temp;
+            f >> temp >> ws;
+            SudokuMezoVector[i][j].Value = temp;
+            cout << temp <<" ";
+        }
+    }
 }

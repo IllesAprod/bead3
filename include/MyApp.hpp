@@ -3,6 +3,7 @@
 #include "Widget.hpp"
 #include "StaticText.hpp"
 #include "DynamicText.hpp"
+#include "Button.hpp"
 #include "SudokuWidget.hpp"
 #include "Application.hpp"
 #include "GameMod.hpp"
@@ -17,6 +18,7 @@ protected:
     DynamicText *st2;
     DynamicText *st3;
     SudokuWidget *aw;
+    Button *bt1;
     /*** MYAPP VARIABLES***/
     GameMod *GM;
     std::vector<std::vector<SudokuMezo> > SudokuMezoVector;

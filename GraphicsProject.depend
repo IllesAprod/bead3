@@ -129,7 +129,7 @@
 
 1431783008 c:\users\aprood\documents\github\cpp_\newwidget\include\colors.hpp
 
-1432332660 source:c:\users\aprood\documents\github\bead3\application.cpp
+1432381997 source:c:\users\aprood\documents\github\bead3\application.cpp
 	"Application.hpp"
 	<iostream>
 
@@ -138,14 +138,15 @@
 	"graphics.hpp"
 	<vector>
 
-1432331559 c:\users\aprood\documents\github\bead3\include\widget.hpp
+1432338381 c:\users\aprood\documents\github\bead3\include\widget.hpp
 	<string>
 	"graphics.hpp"
 
 1431783008 c:\users\aprood\documents\github\bead3\include\graphics.hpp
 	<string>
 
-1431783008 source:c:\users\aprood\documents\github\bead3\button.cpp
+1432381383 source:c:\users\aprood\documents\github\bead3\button.cpp
+	"Button.hpp"
 
 1431783008 source:c:\users\aprood\documents\github\bead3\checkbox.cpp
 
@@ -157,25 +158,26 @@
 	"widget.hpp"
 	<string>
 
-1431783008 source:c:\users\aprood\documents\github\bead3\main.cpp
+1432380527 source:c:\users\aprood\documents\github\bead3\main.cpp
 	"graphics.hpp"
 	"MyApp.hpp"
 
-1432332035 c:\users\aprood\documents\github\bead3\include\myapp.hpp
+1432380542 c:\users\aprood\documents\github\bead3\include\myapp.hpp
 	"Widget.hpp"
 	"StaticText.hpp"
 	"DynamicText.hpp"
-	"AmobaWidget.hpp"
+	"Button.hpp"
+	"SudokuWidget.hpp"
 	"Application.hpp"
 	"GameMod.hpp"
-	"Amoba_Mezo.hpp"
+	"Sudoku_Mezo.hpp"
 	<vector>
 
 1431783008 c:\users\aprood\documents\github\bead3\include\statictext.hpp
 	"Widget.hpp"
 	<string>
 
-1432333202 source:c:\users\aprood\documents\github\bead3\myapp.cpp
+1432380613 source:c:\users\aprood\documents\github\bead3\myapp.cpp
 	"MyApp.hpp"
 	<iostream>
 	"graphics.hpp"
@@ -209,9 +211,9 @@
 1432330446 source:c:\users\aprood\documents\github\bead3\amoba_mezo.cpp
 	"Amoba_Mezo.hpp"
 
-1432328788 c:\users\aprood\documents\github\bead3\include\amoba_mezo.hpp
+1432334535 c:\users\aprood\documents\github\bead3\include\amoba_mezo.hpp
 
-1432333094 source:c:\users\aprood\documents\github\bead3\amobamezo.cpp
+1432333719 source:c:\users\aprood\documents\github\bead3\amobamezo.cpp
 	"AmobaWidget.hpp"
 	<string>
 	<sstream>
@@ -223,11 +225,36 @@
 	"GameMod.hpp"
 	"Amoba_Mezo.hpp"
 
-1432333539 c:\users\aprood\documents\github\bead3\include\gamemod.hpp
-	"Amoba_Mezo.hpp"
+1432382550 c:\users\aprood\documents\github\bead3\include\gamemod.hpp
+	"Sudoku_Mezo.hpp"
 	<vector>
 
-1432333539 source:c:\users\aprood\documents\github\bead3\gamemod.cpp
+1432385429 source:c:\users\aprood\documents\github\bead3\gamemod.cpp
 	"GameMod.hpp"
 	<iostream>
+	<time.h>
+	<stdlib.h>
+	<fstream>
+
+1432334673 c:\users\aprood\documents\github\bead3\include\sudokuwidget.hpp
+	<vector>
+	"Widget.hpp"
+	"GameMod.hpp"
+	"Sudoku_Mezo.hpp"
+
+1432336763 c:\users\aprood\documents\github\bead3\include\sudoku_mezo.hpp
+
+1432336763 source:c:\users\aprood\documents\github\bead3\sudoku_mezo.cpp
+	"Sudoku_Mezo.hpp"
+
+1432340318 source:c:\users\aprood\documents\github\bead3\sudokumezo.cpp
+	"SudokuWidget.hpp"
+	<string>
+	<sstream>
+	<iostream>
+
+1432380710 c:\users\aprood\documents\github\bead3\include\button.hpp
+	"Widget.hpp"
+	<string>
+	<functional>
 

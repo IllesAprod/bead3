@@ -6,7 +6,7 @@ using namespace genv;
 Application::Application(int w, int h)
 : width(w), height(h)
 {
-    FocusIndex = FocusableWidgets.size()+1;
+    FocusIndex = FocusableWidgets.size();
     gout.open(width, height);
 }
 
