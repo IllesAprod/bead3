@@ -5,7 +5,7 @@ using namespace genv;
 
 int main()
 {
-    MyApp myapp(600,600);
+    MyApp myapp(800,500);
     myapp.Show();
     return 0;
 }

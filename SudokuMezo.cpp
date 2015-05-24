@@ -21,8 +21,18 @@ void SudokuWidget::Draw()
     gout << move_to(coord_x, coord_y);
     for(unsigned i=0; i < SudokuMezoVector.size(); i++)
     {
+        if(i%3 == 0)
+        {
+            gout << move_to(coord_x + i * size_x + i - 1, coord_y) << color(0,0,255) << line(0, 9*size_y + 8);
+            gout << move_to(coord_x, coord_y + i * size_y + i - 1) << color(0,0,255) << line(9*size_x + 8, 0);
+            gout << move_to(coord_x + size_x * 9 + 8, coord_y) << color(0,0,255) << line(0, size_y * 9 + 9);
+            gout << move_to(coord_x, coord_y + size_y * 9 + 8) << color(0,0,255) << line(size_x * 9 + 9, 0);
+        }
+
         for(unsigned j=0; j < SudokuMezoVector.size(); j++)
         {
+
+
             stringstream ss;
             string temp;
             if(SudokuMezoVector[i][j].Value != 0)
@@ -63,7 +73,7 @@ void SudokuWidget::EventHandler(event ev)
         {
             for(unsigned j=0; j < SudokuMezoVector.size(); j++)
             {
-                if(ev.pos_x >= (i*size_x) + i && ev.pos_x < ((i+1)*size_x) + i && ev.pos_y >= (j*size_y) + j && ev.pos_y < ((j+1)*size_y) + j)
+                if(ev.pos_x >= (i*size_x) + coord_x + i && ev.pos_x < ((i+1)*size_x) + coord_x + i && ev.pos_y >= (j*size_y) + coord_y + j && ev.pos_y < ((j+1)*size_y) + coord_y + j)
                 {
                     GM -> FeedBackClick(i, j);
                 }

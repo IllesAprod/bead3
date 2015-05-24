@@ -9,12 +9,15 @@ using namespace std;
 GameMod::GameMod(std::vector<std::vector<SudokuMezo> > v)
     : SudokuMezoVector(v)
     {
+        srand (time(NULL));
         LoadSudoku();
+        GenerateSudoku();
         CheckBoxes();
         CheckRows();
         CheckColumns();
         CheckAndSet0();
-        srand (time(NULL));
+
+
 
 
 
@@ -31,8 +34,8 @@ void GameMod::FeedBackClick(int x, int y)
 
 void GameMod::IncValue(int x, int y)
 {
-    if(SudokuMezoVector[x][y].Value < 9)  SudokuMezoVector[x][y].Value++;
-    else  SudokuMezoVector[x][y].Value = 0;
+    if(SudokuMezoVector[x][y].Value < 9 && !SudokuMezoVector[x][y].Generated)  SudokuMezoVector[x][y].Value++;
+    else if(!SudokuMezoVector[x][y].Generated)  SudokuMezoVector[x][y].Value = 0;
 }
 
 std::vector<std::vector<SudokuMezo> > GameMod::GetSudokuMezoVector()
@@ -177,7 +180,7 @@ void GameMod::SetColumnWrongTrue(int y)
 {
     for(int i=0; i<9; i++)
     {
-        SudokuMezoVector[i][y].WrongRow = true;
+        SudokuMezoVector[i][y].WrongColumn = true;
     }
 }
 
@@ -185,7 +188,7 @@ void GameMod::SetColumnWrongFalse(int y)
 {
     for(int i=0; i<9; i++)
     {
-        SudokuMezoVector[i][y].WrongRow = false;
+        SudokuMezoVector[i][y].WrongColumn = false;
     }
 }
 
@@ -211,6 +214,7 @@ bool GameMod::CompareVector(std::vector<int> v)
 
 bool GameMod::Win()
 {
+
     for(int i=0; i<9; i++)
     {
         for(int j=0; j<9; j++)
@@ -224,7 +228,7 @@ bool GameMod::Win()
 
 void GameMod::GenerateSudoku()
 {
-
+        LoadSudoku();
         int rand_num = rand()%3;
         int rand_num2 = rand()%3;
         for(int j=0; j<9; j++)
@@ -280,7 +284,6 @@ void GameMod::GenerateSudoku()
                 if(Win())
                 {
                     possible.push_back(j);
-                    cout << j << " " << rand1 << " " << rand2 << endl;
                 }
             }
             if(possible.size() <= 5)
@@ -288,6 +291,15 @@ void GameMod::GenerateSudoku()
                 SudokuMezoVector[rand1][rand2].Value = 0;
             }
             else SudokuMezoVector = temp;
+
+            for(int i=0; i<9; i++)
+            {
+                for(int j=0; j<9; j++)
+                {
+                    if(SudokuMezoVector[i][j].Value > 0) SudokuMezoVector[i][j].Generated = true;
+                    else SudokuMezoVector[i][j].Generated = false;
+                }
+            }
         }
 
 
@@ -295,6 +307,14 @@ void GameMod::GenerateSudoku()
         CheckRows();
         CheckColumns();
         CheckAndSet0();
+
+        vector<vector<SudokuMezo> > temp = SudokuMezoVector;
+        if(!SolveSudoku())
+        {
+            SudokuMezoVector = temp;
+            GenerateSudoku();
+        }
+        else SudokuMezoVector = temp;
 
 }
 
@@ -309,7 +329,63 @@ void GameMod::LoadSudoku()
             int temp;
             f >> temp >> ws;
             SudokuMezoVector[i][j].Value = temp;
-            cout << temp <<" ";
+        }
+    }
+}
+
+bool GameMod::SolveSudoku()
+{
+    int row, col;
+
+    if(!Unassigned(row, col)) return true;
+
+    for(int num=1; num < 10; num++)
+    {
+        SudokuMezoVector[row][col].Value = num;
+        CheckBoxes();
+        CheckRows();
+        CheckColumns();
+        CheckAndSet0();
+
+        if(Win())
+        {
+            if(SolveSudoku()) return true;
+        }
+        else SudokuMezoVector[row][col].Value = 0;
+    }
+    return false;
+}
+
+bool GameMod::Unassigned(int &x, int &y)
+{
+    for(int i=0; i<9; i++)
+    {
+        for(int j=0; j<9; j++)
+        {
+            if(SudokuMezoVector[i][j].Value == 0)
+            {
+                x = i;
+                y = j;
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+void GameMod::SetSudokuMezoVector(std::vector<std::vector<SudokuMezo> > v)
+{
+    SudokuMezoVector = v;
+}
+
+void GameMod::SetBackGenerated()
+{
+    for(int i=0; i<9; i++)
+    {
+        for(int j=0; j<9; j++)
+        {
+            if(!SudokuMezoVector[i][j].Generated) SudokuMezoVector[i][j].Value = 0;
         }
     }
 }

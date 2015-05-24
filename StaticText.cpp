@@ -13,6 +13,8 @@ StaticText::StaticText(Application* ap, int x, int y, int sx, int sy, string txt
         value = txt;
         align = al;
         color = col;
+
+        Widget::Load(ap);
     }
 
 void StaticText::Draw()

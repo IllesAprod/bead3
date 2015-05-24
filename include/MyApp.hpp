@@ -14,11 +14,15 @@ class MyApp : public Application
 {
 protected:
     /*** CREATING WIDGET POINTERS ***/
-    DynamicText *st1;
-    DynamicText *st2;
-    DynamicText *st3;
     SudokuWidget *aw;
     Button *bt1;
+    Button *bt2;
+    StaticText *st1;
+    StaticText *st2;
+    StaticText *st3;
+    StaticText *st4;
+    StaticText *st5;
+    StaticText *st6;
     /*** MYAPP VARIABLES***/
     GameMod *GM;
     std::vector<std::vector<SudokuMezo> > SudokuMezoVector;

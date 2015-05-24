@@ -27,7 +27,11 @@ public:
     void GenerateSudoku();
     void LoadSudoku();
     bool Win();
+    bool SolveSudoku();
+    void SetBackGenerated();
+    bool Unassigned(int &x, int &y);
     std::vector<std::vector<SudokuMezo> > GetSudokuMezoVector();
+    void SetSudokuMezoVector(std::vector<std::vector<SudokuMezo> > v);
 };
 
 #endif // GAMEMOD_HPP_INCLUDED

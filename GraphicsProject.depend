@@ -129,40 +129,40 @@
 
 1431783008 c:\users\aprood\documents\github\cpp_\newwidget\include\colors.hpp
 
-1432381997 source:c:\users\aprood\documents\github\bead3\application.cpp
+1432353796 source:c:\users\aprood\documents\github\bead3\application.cpp
 	"Application.hpp"
 	<iostream>
 
-1431788233 c:\users\aprood\documents\github\bead3\include\application.hpp
+1432353796 c:\users\aprood\documents\github\bead3\include\application.hpp
 	"widget.hpp"
 	"graphics.hpp"
 	<vector>
 
-1432338381 c:\users\aprood\documents\github\bead3\include\widget.hpp
+1432353796 c:\users\aprood\documents\github\bead3\include\widget.hpp
 	<string>
 	"graphics.hpp"
 
-1431783008 c:\users\aprood\documents\github\bead3\include\graphics.hpp
+1432353796 c:\users\aprood\documents\github\bead3\include\graphics.hpp
 	<string>
 
-1432381383 source:c:\users\aprood\documents\github\bead3\button.cpp
+1432353796 source:c:\users\aprood\documents\github\bead3\button.cpp
 	"Button.hpp"
 
-1431783008 source:c:\users\aprood\documents\github\bead3\checkbox.cpp
+1432353796 source:c:\users\aprood\documents\github\bead3\checkbox.cpp
 
-1432329013 source:c:\users\aprood\documents\github\bead3\dynamictext.cpp
+1432353796 source:c:\users\aprood\documents\github\bead3\dynamictext.cpp
 	"DynamicText.hpp"
 	<iostream>
 
-1431783008 c:\users\aprood\documents\github\bead3\include\dynamictext.hpp
+1432353796 c:\users\aprood\documents\github\bead3\include\dynamictext.hpp
 	"widget.hpp"
 	<string>
 
-1432380527 source:c:\users\aprood\documents\github\bead3\main.cpp
+1432474155 source:c:\users\aprood\documents\github\bead3\main.cpp
 	"graphics.hpp"
 	"MyApp.hpp"
 
-1432380542 c:\users\aprood\documents\github\bead3\include\myapp.hpp
+1432474026 c:\users\aprood\documents\github\bead3\include\myapp.hpp
 	"Widget.hpp"
 	"StaticText.hpp"
 	"DynamicText.hpp"
@@ -173,37 +173,37 @@
 	"Sudoku_Mezo.hpp"
 	<vector>
 
-1431783008 c:\users\aprood\documents\github\bead3\include\statictext.hpp
+1432353796 c:\users\aprood\documents\github\bead3\include\statictext.hpp
 	"Widget.hpp"
 	<string>
 
-1432380613 source:c:\users\aprood\documents\github\bead3\myapp.cpp
+1432474514 source:c:\users\aprood\documents\github\bead3\myapp.cpp
 	"MyApp.hpp"
 	<iostream>
 	"graphics.hpp"
 	"stdlib.h"
 
-1431783008 source:c:\users\aprood\documents\github\bead3\numberpicker.cpp
+1432353796 source:c:\users\aprood\documents\github\bead3\numberpicker.cpp
 
-1431783008 source:c:\users\aprood\documents\github\bead3\statictext.cpp
+1432473433 source:c:\users\aprood\documents\github\bead3\statictext.cpp
 	"StaticText.hpp"
 	"graphics.hpp"
 	<iostream>
 
-1432332035 source:c:\users\aprood\documents\github\bead3\widget.cpp
+1432353796 source:c:\users\aprood\documents\github\bead3\widget.cpp
 	"Widget.hpp"
 	"Application.hpp"
 	"graphics.hpp"
 	"Colors.hpp"
 	<iostream>
 
-1431783008 c:\users\aprood\documents\github\bead3\include\colors.hpp
+1432353796 c:\users\aprood\documents\github\bead3\include\colors.hpp
 
-1432327185 source:c:\users\aprood\documents\github\bead3\listdropdown.cpp
+1432353796 source:c:\users\aprood\documents\github\bead3\listdropdown.cpp
 	"ListDropDown.hpp"
 	<stdlib.h>
 
-1432327194 c:\users\aprood\documents\github\bead3\include\listdropdown.hpp
+1432353796 c:\users\aprood\documents\github\bead3\include\listdropdown.hpp
 	"Widget.hpp"
 	<vector>
 	<string>
@@ -225,36 +225,148 @@
 	"GameMod.hpp"
 	"Amoba_Mezo.hpp"
 
-1432382550 c:\users\aprood\documents\github\bead3\include\gamemod.hpp
+1432472274 c:\users\aprood\documents\github\bead3\include\gamemod.hpp
 	"Sudoku_Mezo.hpp"
 	<vector>
 
-1432385429 source:c:\users\aprood\documents\github\bead3\gamemod.cpp
+1432474480 source:c:\users\aprood\documents\github\bead3\gamemod.cpp
 	"GameMod.hpp"
 	<iostream>
 	<time.h>
 	<stdlib.h>
 	<fstream>
 
-1432334673 c:\users\aprood\documents\github\bead3\include\sudokuwidget.hpp
+1432353796 c:\users\aprood\documents\github\bead3\include\sudokuwidget.hpp
 	<vector>
 	"Widget.hpp"
 	"GameMod.hpp"
 	"Sudoku_Mezo.hpp"
 
-1432336763 c:\users\aprood\documents\github\bead3\include\sudoku_mezo.hpp
+1432353796 c:\users\aprood\documents\github\bead3\include\sudoku_mezo.hpp
 
-1432336763 source:c:\users\aprood\documents\github\bead3\sudoku_mezo.cpp
+1432353796 source:c:\users\aprood\documents\github\bead3\sudoku_mezo.cpp
 	"Sudoku_Mezo.hpp"
 
-1432340318 source:c:\users\aprood\documents\github\bead3\sudokumezo.cpp
+1432474384 source:c:\users\aprood\documents\github\bead3\sudokumezo.cpp
 	"SudokuWidget.hpp"
 	<string>
 	<sstream>
 	<iostream>
 
-1432380710 c:\users\aprood\documents\github\bead3\include\button.hpp
+1432353796 c:\users\aprood\documents\github\bead3\include\button.hpp
 	"Widget.hpp"
 	<string>
 	<functional>
+
+1432353796 source:\\psf\home\documents\bead3-master\application.cpp
+	"Application.hpp"
+	<iostream>
+
+1432353796 \\psf\home\documents\bead3-master\include\application.hpp
+	"widget.hpp"
+	"graphics.hpp"
+	<vector>
+
+1432353796 \\psf\home\documents\bead3-master\include\widget.hpp
+	<string>
+	"graphics.hpp"
+
+1432353796 \\psf\home\documents\bead3-master\include\graphics.hpp
+	<string>
+
+1432353796 source:\\psf\home\documents\bead3-master\button.cpp
+	"Button.hpp"
+
+1432353796 \\psf\home\documents\bead3-master\include\button.hpp
+	"Widget.hpp"
+	<string>
+	<functional>
+
+1432353796 source:\\psf\home\documents\bead3-master\checkbox.cpp
+
+1432353796 source:\\psf\home\documents\bead3-master\dynamictext.cpp
+	"DynamicText.hpp"
+	<iostream>
+
+1432353796 \\psf\home\documents\bead3-master\include\dynamictext.hpp
+	"widget.hpp"
+	<string>
+
+1432474480 source:\\psf\home\documents\bead3-master\gamemod.cpp
+	"GameMod.hpp"
+	<iostream>
+	<time.h>
+	<stdlib.h>
+	<fstream>
+
+1432472274 \\psf\home\documents\bead3-master\include\gamemod.hpp
+	"Sudoku_Mezo.hpp"
+	<vector>
+
+1432353796 \\psf\home\documents\bead3-master\include\sudoku_mezo.hpp
+
+1432353796 source:\\psf\home\documents\bead3-master\listdropdown.cpp
+	"ListDropDown.hpp"
+	<stdlib.h>
+
+1432353796 \\psf\home\documents\bead3-master\include\listdropdown.hpp
+	"Widget.hpp"
+	<vector>
+	<string>
+
+1432474155 source:\\psf\home\documents\bead3-master\main.cpp
+	"graphics.hpp"
+	"MyApp.hpp"
+
+1432474026 \\psf\home\documents\bead3-master\include\myapp.hpp
+	"Widget.hpp"
+	"StaticText.hpp"
+	"DynamicText.hpp"
+	"Button.hpp"
+	"SudokuWidget.hpp"
+	"Application.hpp"
+	"GameMod.hpp"
+	"Sudoku_Mezo.hpp"
+	<vector>
+
+1432353796 \\psf\home\documents\bead3-master\include\statictext.hpp
+	"Widget.hpp"
+	<string>
+
+1432353796 \\psf\home\documents\bead3-master\include\sudokuwidget.hpp
+	<vector>
+	"Widget.hpp"
+	"GameMod.hpp"
+	"Sudoku_Mezo.hpp"
+
+1432474514 source:\\psf\home\documents\bead3-master\myapp.cpp
+	"MyApp.hpp"
+	<iostream>
+	"graphics.hpp"
+	"stdlib.h"
+
+1432353796 source:\\psf\home\documents\bead3-master\numberpicker.cpp
+
+1432473433 source:\\psf\home\documents\bead3-master\statictext.cpp
+	"StaticText.hpp"
+	"graphics.hpp"
+	<iostream>
+
+1432353796 source:\\psf\home\documents\bead3-master\sudoku_mezo.cpp
+	"Sudoku_Mezo.hpp"
+
+1432474384 source:\\psf\home\documents\bead3-master\sudokumezo.cpp
+	"SudokuWidget.hpp"
+	<string>
+	<sstream>
+	<iostream>
+
+1432353796 source:\\psf\home\documents\bead3-master\widget.cpp
+	"Widget.hpp"
+	"Application.hpp"
+	"graphics.hpp"
+	"Colors.hpp"
+	<iostream>
+
+1432353796 \\psf\home\documents\bead3-master\include\colors.hpp
 
